@@ -21,8 +21,10 @@ from keras.layers import Dense<br>
 from keras.layers import LSTM<br>
 from keras.layers import Embedding<br></td></tr>
 <tr><th>Provide the dataset to perform the operation of next word prediction</th></tr>
-<tr><td>dataset="""Hello this is my project on next word predictor. I am working as an intern in DevIncept. This project is developed based on RNN-LSTM
-. I am a AI enthusiast and keen to work on many more projects."""</td></tr>
+<tr><td>dataset="""Hello this is my project on next word predictor\n
+I am working as an intern in DevIncept This project is developed based\n
+on RNN-LSTM I am a AI enthusiast and keen to work on many more projects\n
+"""</td></tr>
 <tr><th>Creating an instance of tokenizer and encoding the dataset</th></tr>
 <tr><td>tokenizer=Tokenizer()<br>
 tokenizer.fit_on_texts([dataset])<br>
@@ -97,8 +99,10 @@ from keras.layers import Dense<br>
 from keras.layers import LSTM<br>
 from keras.layers import Embedding<br><br><br>
 
-dataset="""Hello this is my project on next word predictor. I am working as an intern in DevIncept. This project is developed based on RNN-LSTM
-. I am a AI enthusiast and keen to work on many more projects."""<br><br>
+dataset="""Hello this is my project on next word predictor\n
+I am working as an intern in DevIncept This project is developed based\n
+on RNN-LSTM I am a AI enthusiast and keen to work on many more projects\n
+"""<br><br>
 
 tokenizer=Tokenizer()<br>
 tokenizer.fit_on_texts([dataset])<br>
