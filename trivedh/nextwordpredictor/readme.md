@@ -140,10 +140,10 @@ def getseq(mymodel,tokenizer,text,n_pred):<br>
 &nbsp;&nbsp;&nbsp;&nbsp; inp,result=out,result+' '+out<br>
 &nbsp;&nbsp;  return result<br><br>
 
-print(getseq(mymodel,tokenizer,'Hello',3))</td></tr></table>
+print(getseq(mymodel,tokenizer,'Hello',1))</td></tr></table>
 
-<h3>Link to the notebook file</h3>
-<a href=""/>
+<h3>Output</h3>
+<img src=""/>
 
 
 
