@@ -1,6 +1,6 @@
 <h1>Next Word Predictor</h1>
 <h3>Description</h3>
-<p>Next Word Predictor is a project developed with an aim to determine the next word thatt comes after a particular word is typed. This model will consider the word in a sequence
+<p>Next Word Predictor is a project developed with an aim to determine the next word that comes after a particular word is typed. This model will consider the word in a sequence
 and predict the next word. It is widely used in the applications we use widely like e-mail,social networking apps, search engines like google etc. 
 The methods of natural language processing, language modeling, and deep learning will be used to build the model.The deep learning model will be built using LSTM( Long Short Term Memory).
 </p>
@@ -55,7 +55,7 @@ in which data is stored and the number of output classes i.e number of different
 mymodel.add(Embedding(vocab,10,input_length=1))<br>
 mymodel.add(LSTM(50))<br>
 mymodel.add(Dense(vocab,activation='softmax'))<br>
-print(model.summary())</td></tr>
+print(mymodel.summary())</td></tr>
 <tr><td><b>Explanation:</b> <p>Create a sequential model called 'mymodel'. Our sequential model will have three layers: Embedding,LSTM and Dense. Embedding layer is imported from 
 <i>from keras.layers</i>  It requires that the input data be integer encoded, so that each word is represented by a unique integer. It has three parameters: <i>input_dim: size of vocabulary
 in the dataset,output_dim: the number of dimensions we wish to embed into, input_length</i>. LSTM(Long short term Memory) is an artificial recurrent neural network architecture used
@@ -63,7 +63,7 @@ in the field of deep learning. LSTM has feedback connections. '50' defines the n
 and activation. <i>activation='softmax'</i>: Softmax is used as the activation for the last layer of a classification network because the result could be interpreted as a probability distribution</p></td></tr>
 
 <tr><th><Compiling the network</th></tr>
-<tr><td>model.compile(loss='categorical_crossentropy',optimmizer='adam',metrics=['accuracy'])</td></tr>
+<tr><td>model.compile(loss='categorical_crossentropy',optimizer='adam',metrics=['accuracy'])</td></tr>
 <tr><th>Training the model</th></tr>
 <tr><td>mymodel.fit(x,y,epochs=100)</td></tr>
 <tr><td><b>Explanation:</b><p>We have to train the model using the input and output data we have divided i.e x and y. <i>epochs=100</i> is used to separate training into distinct phases,
