@@ -143,7 +143,7 @@ def getseq(mymodel,tokenizer,text,n_pred):<br>
 print(getseq(mymodel,tokenizer,'Hello',1))</td></tr></table>
 
 <h3>Output</h3>
-<img src=""/>
+<img src="out.png"/>
 
 
 
