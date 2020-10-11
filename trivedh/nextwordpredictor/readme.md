@@ -5,7 +5,7 @@ and predict the next word. It is widely used in the applications we use widely l
 The methods of natural language processing, language modeling, and deep learning will be used to build the model.The deep learning model will be built using LSTM( Long Short Term Memory).
 </p>
 <h3>Algorithms used</h3>
-<h5>RNN-LSTM(Recurrent neural network-Long Short Term Memory)</h5>:
+<h5>RNN-LSTM(Recurrent neural network-Long Short Term Memory):</h5>
 <p>Long short-term memory is an artificial recurrent neural network architecture used in the field of deep learning. LSTM uses the concept of feedback connections.
 LSTM model uses Deep learning with a network of artificial “cells” that manage memory, making them better suited for text prediction than traditional neural 
 networks and other models.LSTM tackles the long-term dependency problem because it has memory cells to remember the previous context. Therefore LSTM approach is the best approach 
