@@ -63,7 +63,7 @@ in the field of deep learning. LSTM has feedback connections. '50' defines the n
 and activation. <i>activation='softmax'</i>: Softmax is used as the activation for the last layer of a classification network because the result could be interpreted as a probability distribution</p></td></tr>
 
 <tr><th><Compiling the network</th></tr>
-<tr><td>model.compile(loss='categorical_crossentropy',optimizer='adam',metrics=['accuracy'])</td></tr>
+<tr><td>mymodel.compile(loss='categorical_crossentropy',optimizer='adam',metrics=['accuracy'])</td></tr>
 <tr><th>Training the model</th></tr>
 <tr><td>mymodel.fit(x,y,epochs=100)</td></tr>
 <tr><td><b>Explanation:</b><p>We have to train the model using the input and output data we have divided i.e x and y. <i>epochs=100</i> is used to separate training into distinct phases,
@@ -72,7 +72,7 @@ which is useful for logging and periodic evaluation.</p></td></tr>
 <tr><td>def getseq(mymodel,tokenizer,text,n_pred):<br>
 &nbsp;&nbsp;    inp,result=text,text<br>
 &nbsp;&nbsp    for _ in range(n_pred):<br>
-&nbsp;&nbsp&nbsp;&nbsp        encode=tokenizer.texts.to_sequences([inp])[0]<br>
+&nbsp;&nbsp&nbsp;&nbsp        encode=tokenizer.texts_to_sequences([inp])[0]<br>
 &nbsp;&nbsp&nbsp;&nbsp        encode=array(encode)<br>
 &nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp        yt=model.predict_classes(encode)<br>
 &nbsp;&nbsp&nbsp;&nbsp        out=''<br>
@@ -129,7 +129,7 @@ mymodel.fit(x,y,epochs=100)<br><br>
 def getseq(mymodel,tokenizer,text,n_pred):<br>
 &nbsp;&nbsp;    inp,result=text,text<br>
 &nbsp;&nbsp;    for _ in range(n_pred):<br>
-&nbsp;&nbsp&nbsp;&nbsp;        encode=tokenizer.texts.to_sequences([inp])[0]<br>
+&nbsp;&nbsp&nbsp;&nbsp;        encode=tokenizer.texts_to_sequences([inp])[0]<br>
 &nbsp;&nbsp&nbsp;&nbsp;       encode=array(encode)<br>
 &nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;        yt=model.predict_classes(encode)<br>
 &nbsp;&nbsp&nbsp;&nbsp;        out=''<br>
