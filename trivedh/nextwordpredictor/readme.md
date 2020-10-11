@@ -117,7 +117,7 @@ for i in range(1,len(encode)):<br>
 y=to_categorical(y,num_classes=vocab)<br><br>
 
 mymodel=Sequential()<br>
-myodel.add(Embedding(vocab,10,input_length=1))<br>
+mymodel.add(Embedding(vocab,10,input_length=1))<br>
 mymodel.add(LSTM(50))<br>
 mymodel.add(Dense(vocab,activation='softmax'))<br>
 print(mymodel.summary())<br><br>
@@ -129,14 +129,14 @@ mymodel.fit(x,y,epochs=100)<br><br>
 def getseq(mymodel,tokenizer,text,n_pred):<br>
 &nbsp;&nbsp;    inp,result=text,text<br>
 &nbsp;&nbsp;    for _ in range(n_pred):<br>
-&nbsp;&nbsp&;nbsp;&nbsp;encode=tokenizer.texts_to_sequences([inp])[0]<br>
-&nbsp;&nbsp&;nbsp;&nbsp;encode=array(encode)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;encode=tokenizer.texts_to_sequences([inp])[0]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;encode=array(encode)<br>
 &nbsp;&nbsp&nbsp;&nbsp;yt=mymodel.predict_classes(encode)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;        out=''<br>
 &nbsp;&nbsp;&nbsp;&nbsp;        for word,index in tokenizer.word_index.items():<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if index==yt:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out=word<br>
-&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;break<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if index==yt:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out=word<br>
+&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp; break<br>
 &nbsp;&nbsp;&nbsp;&nbsp; inp,result=out,result+' '+out<br>
 &nbsp;&nbsp;  return result<br><br>
 
